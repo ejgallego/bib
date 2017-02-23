@@ -1,0 +1,386 @@
+%% Bibliography for curry
+
+%% Babel
+@article{kulomoro:1996:fllbiigm,
+    author = "Herbert Kuchen and Rita Loogen and {Moreno-Navarro}, J. J. and Rodríguez-Artalejo, M.",
+    title = "The Functional Logic Language {BABEL} and Its Implementation on a Graph Machine",
+    journal = "New Generation Computing",
+    volume = "14",
+    number = "4",
+    pages = "391-427",
+    year = "1996",
+    url = "http://citeseer.nj.nec.com/kuchen96functional.html",
+    postscript = {/papers/ibam_jl.ps.gz},
+    keywords = {implementation of funtional logic languages},
+    abstract = {We investigate the development of a graph narrowing
+                  machine for a higher order functional logic language
+                  by extension of an appropriate architecture for
+                  purely functional languages. To execute logic
+                  programs the machine must be capable of unification
+                  and backtracking. We show the integration of these
+                  mechanisms in a programmed (functional) graph
+                  reduction machine. The resulting abstract machine
+                  has been realized in C code as part of the
+                  implementation of the functional logic language
+                  BABEL. A brief introduction to this language is
+                  included. Moreover, we show a comparison between
+                  BABEL and PROLOG based on the runtimes of some
+                  example programs.}
+}
+
+% Curry
+
+@Manual{packsmanual,
+  title =        {Packs User's Manual},
+  author =       {Michael Hanus},
+  year =         2004,
+  url =          {http://www.informatik.uni-kiel.de/~pakcs/}
+}
+
+
+
+@Misc{flatcurry,
+  author =       {Michael Hanus},
+  title =        {Flat {C}urry especification},
+  url =          {http://www.informatik.uni-kiel.de/~mh/curry/flat/}
+}
+
+@misc{ antoy01implementation,
+  author = "S. Antoy and M. Hanus and B. Massey and F. Steiner",
+  title = "An implementation of narrowing strategies",
+  text = "S. Antoy, M. Hanus, B. Massey, and F. Steiner. An implementation of narrowing
+    strategies. In Proc. of 3rd Int'l Conf. on Principles and Practice of Declarative
+    Programming (PPDP'01). Springer LNCS, 2001.",
+  year = 2001,
+  url = "http://sherry.ifi.unizh.ch/antoy01implementation.html" }
+
+@Manual{curryreport:0.8,
+  title =        {Curry: An Integrated Functional Logic Language},
+  author =       {Michael Hanus and Sergio Antoy and Herbert Kuchen and Francisco J. {López-Fraguas} and Wolfgang Lux and Juan José {Moreno-Navarro} and Frank Steiner},
+  edition =      {0.8},
+  month =        apr,
+  year =         2003,
+  note =         {Editor: Michael Hanus},
+  url =          {http://www.informatik.uni-kiel.de/~mh/curry/report.html},
+}
+
+@InProceedings{Lux:FLOPS99,
+  author =       {Lux, Wolfgang},
+  title =        {Implementing Encapsulated Search for a Lazy Functional Logic Language},
+  booktitle =    {Functional and Logic Programming, 4th International Symposium, FLOPS '99, Tsukuba, Japan, November 1999, Proceedings},
+  pages =        {100--113},
+  year =         1999,
+  editor =       {Middeldorp, Aart and Sato, Taisuke},
+  series =       {LNCS 1722},
+  publisher =    {Springer Verlag}
+}
+
+@inproceedings{DBLP:conf/gi/LuxK99,
+  author    = {Wolfgang Lux and
+               Herbert Kuchen},
+  title     = {An Efficient Abstract Machine for {C}urry.},
+  booktitle = {GI Jahrestagung},
+  year      = {1999},
+  pages     = {390-399},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+%% Articulo original de Definitional Trees
+
+@InProceedings{Antoy92,
+  author =       {Sergio Antoy},
+  title =        {Definitional Trees},
+  booktitle =    {Proc. of the 4th Intl. Conf. on Algebraic and Logic
+                  Programming, ICALP'92},
+  editor =       {Leach and Rodríguez Artalejo},
+  volume =       632,
+  series =       LNCS,
+  year =         1992,
+  publisher =    SV,
+  pages =        {143--157},
+  annote =       {Definitional trees have become a useful intermediate
+                  notation in the compilation of functional logic languages.
+                  This is Antoy's original paper on the subject.}
+}
+
+%% Needed Narrowing Strategy
+@InProceedings{AEH94,
+  author =       {Sergio Antoy and Rachid Echahed and Michael Hanus},
+  title =        {A Needed Narrowing Strategy},
+  booktitle =    {Proc.~21st.~ACM Symposium on Principles of
+                  Programming Languages},
+  pages =        {268--279},
+  year =         1994,
+  address =      {Portland, Oregon},
+  publisher =    {ACM Press},
+  annote =       {Lazy narrowing based on sequential definitional trees is
+                  formalized and proved correct. See also \cite{Antoy92}.}
+}
+
+%% Implementación de narrowing paralelo de Daniela Genius
+@InProceedings{Genius96,
+  author =       {Daniela Genius},
+  title =        {Sequential Implementation of Parallel Narrowing},
+  booktitle =    {Proc. JICSLP'96 Workshop on Multi-Paradigm Logic
+                  Programming},
+  year =         1996,
+  pages =        {95--104},
+  note =         {TU Berlin, Technical Report No. 96-28},
+  annote =       {Genius presents a prototype implementation of
+                  lazy narrowing based on parallel definitional trees that
+                  shows the inherent inefficiency of parallel narrowing.
+                  See also \cite{AEH97}.}
+}
+
+%% Parallel Definitional Trees
+
+@InProceedings{AEH97,
+  author =       {Sergio Antoy and Rachid Echahed and Michael Hanus},
+  title =        {Parallel Evaluation Strategies for Functional Logic
+                  Languages},
+  booktitle =    {International Conference on Logic Programming},
+  year =         1997,
+  annote =       {Standard (sequential) definitional trees impose certain
+                  syntactic restrictions on the rules of a program --
+                  strong sequentiality. Parallel definitional trees are
+                  introduced as an attempt of being complete, but the idea
+                  is mostly of theoretical interest.
+                  See also \cite{Genius96}.}
+}
+
+%% Artículos nuestros.
+@MastersThesis{babel:decl-debugger,
+  author =       {José Manuel {Fernández García}},
+  title =        {{aBAD}, un depurador declarativo para Babel},
+  school =       {FI, UPM},
+  year =         1995
+}
+
+@PhdThesis{xms:thesis,
+  author =       {Julio Mariño},
+  title =        {Semantics and Analysis of Functional Logic Programs},
+  school =       {Universidad Politécnica de Madrid, Facultad de Informática},
+  year =         {2002},
+  month =        {May},
+  note =         {Supervisor: Juan José Moreno Navarro}
+}
+                  
+@PhdThesis{jjmoreno:thesis,
+  author =       {Juan José {Moreno Navarro}},
+  title =        {Diseño, Semántica e Implementación de Babel: un
+                  lenguaje que integra la programación funcional y la
+                  lógica},
+  school =       {Universidad Politécnica de Madrid, Facultad de Informática},
+  year =         {1989},
+  month =        {July},
+  note =         {Supervisor: Mario Rodríguez Artalejo}
+}
+
+@InProceedings{padl00,
+  author =       {Julio Mariño and Juan José {Moreno-Navarro}},
+  title =        {Using Static Analysis to Compile non-Sequential
+                  Functional Logic Programs},
+  booktitle =    {Practical Aspects of Declarative Programming (PADL 2000)},
+  pages =        {63--80},
+  year =         {2000},
+  editor =       {Enrico Pontelli and Vítor {Santos Costa}},
+  volume =       1753,
+  series =       LNCS,
+  month =        {January},
+  publisher =    SV,
+  annote =       {This article shows the application of strictness analysis
+                  to the generation of sequential definitional trees from
+                  non weakly sequential Curry definitions. }
+}
+
+@MastersThesis{MR97,
+  author =       {José María Rey and Julio Mariño},
+  title =        {Implementación de {C}urry mediante su traducción a {P}rolog},
+  school =       {Facultad de Informática, Universidad Politécnica de Madrid},
+  year =         {1997},
+  OPTkey =       {},
+  OPTaddress =   {},
+  OPTtype =      {},
+  OPTmonth =     {},
+  note =         {In Spanish},
+  annote =       {José María's master's thesis actually presented the
+                  first usable implementation of Curry.}
+}
+
+@InProceedings{wflp98sloth,
+  author =       {Julio Mariño and José María Rey},
+  title =        {The Implementation of {C}urry via its Translation into
+                  {P}rolog},
+  booktitle =    {7th Workshop on Functional and Logic Programming
+                  (WFLP98)},
+  year =         1998,
+  editor =       {Kuchen},
+  number =       63,
+  series =       {Working Papers},
+  publisher =    {Westfälische Wilhelms-Universität Münster}
+}
+
+@inproceedings{1085113,
+ author = {Emilio Jesús {Gallego Arias} and Julio Mariño},
+ title = {An overview of the {S}loth2005 {C}urry system: system description},
+ booktitle = {WCFLP '05: Proceedings of the 2005 ACM SIGPLAN workshop on Curry and functional logic programming},
+ year = 2005,
+ isbn = {1-59593-069-8},
+ pages = {66--69},
+ location = {Tallinn, Estonia},
+ doi = {http://doi.acm.org/10.1145/1085099.1085113},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ }
+
+@INPROCEEDINGS{jimamo:1992:eclnp,
+ AUTHOR = "J. A. Jiménez and J. Mariño and {Moreno-Navarro}, J. J.",
+ TITLE = "Efficient Compilation of Lazy Narrowing into PROLOG",
+ BOOKTITLE = "Workshop on Logic on Program Synthesis and Transformation - LOPSTR'92, Manchester (UK)",
+ ORGANIZATION = " University of Manchester",
+ MONTH = aug,
+ YEAR = "1992",
+ EDITOR = "T. Clement and Kung-Kiu Lau",
+ PUBLISHER = "Workshops in Computer Science, Springer Verlag, January 1993.",
+ PAGES = " 14",
+ postscript = {/papers/babel2prolog.ps.gz},
+ keywords = {implementation of functional logic languages, compilation of functional logic languages into prolog},
+ abstract = {The paper presents new techniques for the transformation of lazy narrowing in logic programs. A formalism, called demand patterns, is introduced, and used to define a demand driven strategy to compute lazy narrowing. The strategy is used to produce standard PROLOG code from programs written in a functional-logic language. Our method has a number of advantages over other approaches. While it can compute a larger class of program, it needs less reevaluation effort, and fully uses efficient elements of PROLOG compilers. The gain of efficiency is shown by presenting the execution times of some example programs.}
+}
+
+@INPROCEEDINGS{mokuloro:1990:lngm,
+ AUTHOR = "{Moreno-Navarro}, J. J. and H. Kuchen and R. Loogen and Rodríguez-Artalejo, M.",
+ TITLE = "Lazy Narrowing in a Graph Machine",
+ BOOKTITLE = "2nd International Conference on Algebraic and Logic Programming, Nancy (France)",
+ ORGANIZATION = " CRIN (Centre de Recherche en Informatique de Nancy)",
+ MONTH = oct,
+ YEAR = "1990",
+ EDITOR = "H. Kichner and W. Wechler",
+ PUBLISHER = "LNCS, Springer Verlag",
+ PAGES = " 298-317",
+ postscript = {/papers/lbam.ps.gz},
+ keywords = {implementation of functional logic languages, lazy narrowing},
+ abstract = {The paper investigates the implementation of lazy narrowing in the framework of a graph reduction machine. By extending an appropriate architecture for purely functional languages an abstract graph narrowing machine for a functional logic language is constructed. The machine is capable of performing unification and backtracking. The techniques used in functional languages to cope with lazy evaluation are not directly applicable, but must be modified due to the logic component of the implemented language. A prototype implementation of the new machine has been developed.}
+}
+
+@TechReport{hakumo:2000:curry,
+  author        = {M.~Hanus (ed.) and H.~Kuchen and
+                   J.J.~Moreno-Navarro et al.},
+  title         = {Curry: An Integrated Functional Logic Language},
+  institution   = {RWTH Aachen},
+  year          = {2000},
+  abstract      = {The Curry language is the result of a collaboration
+                   among several research groups and builds on
+                   previous proposals --mainly Babel and ELF. The
+                   draft with the state of the proposal is updated
+                   every six months approximately. The URL may vary,
+                   however, so some web search might be necessary.},
+  url =           {http://www.informatik.uni-kiel.de/~mh/curry/report.html}
+}
+
+@InProceedings{marinnorey:2005:wcflp,
+  author =       {Julio Mariño and José María Rey},
+  title =        {Adding Constraints to Curry via Flat Guards},
+  booktitle =    {Workshop on Curry and Functional Logic Programming,
+                  WCFLP2005},
+  year =         2005,
+  publisher =    {ACM},
+}
+@inproceedings{DBLP:conf/iclp/BonnierM88,
+  author    = {Staffan Bonnier and
+               Jan Maluszynski},
+  title     = {Towards a Clean Amalgamation of Logic Programs with External
+               Procedures},
+  booktitle = {ICLP/SLP},
+  year      = {1988},
+  pages     = {311-326},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+% Provisional
+@inproceedings{Genericsem,
+  author    = {Emilio Jes{\'u}s {Gallego Arias} and
+               Julio Mari{\~n}o and
+               Jos{\'e} Mar\'{\i}a Rey Poza},
+  title     = {A Generic Semantics for Constraint Functional Logic Programming},
+  booktitle = "Proc.\ of the 16th Int'l Workshop on Functional and
+              (Constraint) Logic Programming (WFLP 2007)",
+  year = 2007
+}
+
+@inproceedings{DBLP:conf/popl/Hanus97,
+  author    = {Michael Hanus},
+  title     = {A Unified Computation Model for Functional and Logic Programming},
+  booktitle = {POPL},
+  year      = {1997},
+  pages     = {80-93},
+  ee        = {http://doi.acm.org/10.1145/263699.263710},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/wlp/Hanus97,
+  author    = {Michael Hanus},
+  title     = {Curry: A Multi-Paradigm Declarative Language (system description)},
+  booktitle = {WLP},
+  year      = {1997},
+  pages     = {0-},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/lopstr/Hanus95,
+  author    = {Michael Hanus},
+  title     = {Efficient Translation of Lazy Functional Logic Programs
+               into Prolog},
+  booktitle = {LOPSTR},
+  year      = {1995},
+  pages     = {252-266},
+  ee        = {http://dx.doi.org/10.1007/3-540-60939-3_19},
+  crossref  = {DBLP:conf/lopstr/1995},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{DBLP:conf/lopstr/1995,
+  editor    = {Maurizio Proietti},
+  title     = {Logic Programming Synthesis and Transformation, 5th International
+               Workshop, LOPSTR'95, Utrecht, The Netherlands, September
+               20-22, 1995, Proceedings},
+  booktitle = {LOPSTR},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {1048},
+  year      = {1996},
+  isbn      = {3-540-60939-3},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/iclp/Hanus92,
+  author    = {Michael Hanus},
+  title     = {On the Completeness of Residuation},
+  booktitle = {JICSLP},
+  year      = {1992},
+  pages     = {192-206},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/rta/Lopez-FraguasH99,
+  author    = {Francisco Javier L{\'o}pez-Fraguas and
+               Jaime S{\'a}nchez-Hern{\'a}ndez},
+  title     = {{\it TOY}: A Multiparadigm Declarative System},
+  booktitle = {RTA},
+  year      = {1999},
+  pages     = {244-247},
+  ee        = {http://dx.doi.org/10.1007/3-540-48685-2_19},
+  crossref  = {DBLP:conf/rta/1999},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{DBLP:conf/rta/1999,
+  editor    = {Paliath Narendran and
+               Micha{\"e}l Rusinowitch},
+  title     = {Rewriting Techniques and Applications, 10th International
+               Conference, RTA-99, Trento, Italy, July 2-4, 1999, Proceedings},
+  booktitle = {RTA},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {1631},
+  year      = {1999},
+  isbn      = {3-540-66201-4},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
