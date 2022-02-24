@@ -1,0 +1,595 @@
+%% To do:
+%% insert first names wherever possible
+%% regularize POPL spellings
+%% get rid of ACM Press when it appears with POPL
+%%    - find volume numbers of LNCS, etc.
+%%    - fix up "to appear"
+%%    - find journal versions of conference papers
+%%    - find published versions of TRs
+%%    - find spellings of first names
+%%    - nuke crossreferences
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                       %%
+%%              My Bibliography (from bcp.bib)                           %%
+%%                                                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Conventions:
+%    * Common conferences (POPL, ICFP, etc.) are defined in strings, for
+%      uniformity.  These strings include...
+%         *not* "proceedings of the" or whatever (waste of ink, since
+%            'symposium' or whatever is included)
+%         the sponsoring organization (which means that it's not
+%            necessary to list "ACM Press" as the publisher)
+%         "international symposium" or whatever
+%         *not* "twentieth" or whatever
+%         the conference name spelled out in full
+%         its common acronym, if any
+%         the location of that year's meeting, if I know it
+
+% Some special fields:
+%     checked     Set to "yes" or a date if the citation has been
+%                 checked against a physical copy of the document
+%     fullauthor  Present in some cases where the author's name appears in
+%                 abbreviated form on the actual document, but where
+%                 I happened to know their full name.  The portion of
+%                 the name that does not appear on the document is
+%                 placed in square brackets, following standard
+%                 practice in some publishing houses.
+%     fulleditor  Similar.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                       String Definitions                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Publishing houses
+% %%%%%%%%%%%%%%%%%
+@STRING{ap       = "Academic Press" }
+@STRING{springer = {Springer-Verlag} }
+@STRING{elsevier = "Elsevier" }
+@STRING{entcs    = "Electronic Notes in Theoretical Computer Science" }
+@STRING{lncs     = "Lecture Notes in Computer Science" }
+@STRING{lnm      = "Lecture Notes in Mathematics" }
+@STRING{gtm      = "Graduate Texts in Mathematics" }
+@STRING{lfcs     = "Laboratory for Foundations of Computer Science,
+                    University of Edinburgh" }
+@STRING{mp       = "MIT Press" }
+@STRING{mitpress = mp }
+%
+% Journals and magazines
+% %%%%%%%%%%%%%%%%%%%%%%
+@STRING{toplas   = "ACM Transactions on Programming Languages and Systems" }
+@STRING{jlp      = {Journal of Logic Programming} }
+@STRING{acmpress = "ACM Press" }
+@STRING{cacm     = "Communications of the {ACM}" }
+@STRING{jacm     = "Journal of the {ACM}" }
+@STRING{tcs      = "Theoretical Computer Science" }
+@STRING{jsl      = "Journal of Symbolic Logic" }
+@STRING{bsl      = "Bulletin of Symbolic Logic" }
+@STRING{jcss     = "Journal of Computer and System Sciences"}
+@STRING{siamjc   = "SIAM Journal on Computing" }
+@STRING{mscs     = "Mathematical Structures in Computer Science" }
+@STRING{proc     = "Proceedings of the" }
+@STRING{ic       = "Information and Computation" }
+@STRING{iandcomp = {Information and Computation} }
+@STRING{jfp      = "Journal of Functional Programming" }
+@STRING{cup      = "Cambridge University Press" }
+@STRING{mcgh     = "McGraw-Hill" }
+@STRING{nh       = "North Holland" }
+@STRING{sv       = "Springer-Verlag" }
+@STRING{aw       = "Addison-Wesley" }
+@STRING{ph       = "Prentice Hall" }
+@STRING{tose     = "IEEE Transactions on Software Engineering" }
+%@STRING{taoop   = "C[arl] A. Gunter and J[ohn] C. Mitchell, editors, {\em
+%                  Theoretical Aspects of Object-Oriented Programming:
+%                  Types, Semantics, and Language Design}, MIT Press, 1994" }
+@STRING{taoop    = "C. A. Gunter and J. C. Mitchell, editors, {\em
+                   Theoretical Aspects of Object-Oriented Programming:
+                   Types, Semantics, and Language Design}, MIT Press, 1994" }
+@STRING{tissec   = "ACM Transactions on Information and System Security"}
+@STRING{sigecom  = "ACM {SIG}ecom {E}xchanges"}
+@STRING{jet      = "Journal of Economic Theory"}
+@STRING{geb      = "Games and Economic Behavior"}
+@STRING{jufks    = "{I}nternational {J}ournal of {U}ncertainty, {F}uzziness and
+  {K}nowledge-{B}ased {S}ystems"}
+@STRING{toc      = "Theory of Computing"}
+@STRING{jmlr     = "Journal of Machine Learning Research"}
+@STRING{jpc      = "Journal of Privacy and Confidentiality"}
+@STRING{mor      = "Mathematics of Operations Research"}
+%
+% Misc
+% %%%%
+@STRING{yes = "Yes" }
+@STRING{no  = "No" }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             Conferences                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@STRING{pods        = "{ACM} {SIGACT--SIGMOD--SIGART} {S}ymposium on
+                      {P}rinciples of {D}atabase {S}ystems (PODS)"}
+
+@STRING{pods03      = pods # ", San Diego, California"}
+@STRING{pods05      = pods # ", Baltimore, Maryland"}
+@STRING{pods06      = pods # ", Chicago, Illinois" }
+@STRING{pods07      = pods # ", Beijing, China" }
+@STRING{pods10      = pods # ", Indianapolis, Indiana" }
+
+@STRING{popl        = "{ACM} {SIGPLAN--SIGACT} {S}ymposium on {P}rinciples of
+                      {P}rogramming {L}anguages ({POPL})" }
+@STRING{poplpre92   = "{ACM} {S}ymposium on {P}rinciples of {P}rogramming
+                      {L}anguages ({POPL})" }
+
+@STRING{popl73      = poplpre92 # ", Boston, Massachusetts" }
+@STRING{popl75      = poplpre92 # ", Palo Alto, California" }
+@STRING{popl76      = poplpre92 # ", {A}tlanta, {G}eorgia" }
+@STRING{popl77      = poplpre92 # ", Los Angeles, California" }
+@STRING{popl78      = poplpre92 # ", Tucson, Arizona" }
+@STRING{popl79      = poplpre92 # ", San Antonio, Texas" }
+@STRING{popl80      = poplpre92 # ", Las Vegas, Nevada" }
+@STRING{popl81      = poplpre92 # ", Williamsburg, Virginia" }
+@STRING{popl82      = poplpre92 # ", Albuquerque, New Mexico" }
+@STRING{popl83      = poplpre92 # ", Austin, Texas" }
+@STRING{popl84      = poplpre92 # ", Salt Lake City, Utah" }
+@STRING{popl85      = poplpre92 # ", New Orleans, Louisiana" }
+@STRING{popl86      = poplpre92 # ", St.\ Petersburg Beach, Florida" }
+@STRING{popl87      = poplpre92 # ", Munich, Germany" }
+@STRING{popl88      = poplpre92 # ", San Diego, California" }
+@STRING{popl89      = poplpre92 # ", Austin, Texas" }
+@STRING{popl90      = poplpre92 # ", {S}an {F}rancisco, {C}alifornia" }
+@STRING{popl91      = poplpre92 # ", Orlando, Florida" }
+@STRING{popl92      = popl # ", Albuquerque, New Mexico" }
+@STRING{popl93      = popl # ", Charleston, South Carolina" }
+@STRING{popl94      = popl # ", {P}ortland, {O}regon" }
+@STRING{popl95      = popl # ", San Francisco, California" }
+@STRING{popl96      = popl # ", St.~Petersburg Beach, Florida" }
+@STRING{popl97      = popl # ", Paris, France" }
+@STRING{popl98      = popl # ", San Diego, California" }
+@STRING{popl99      = popl # ", San Antonio, Texas" }
+@STRING{popl00      = popl # ", Boston, Massachusetts" }
+@STRING{popl01      = popl # ", London, England" }
+@STRING{popl02      = popl # ", Portland, Oregon" }
+@STRING{popl03      = popl # ", New Orleans, Louisiana" }
+@STRING{popl04      = popl # ", Venice, Italy" }
+@STRING{popl05      = popl # ", Long Beach, California" }
+@STRING{popl08      = popl # ", San Francisco, California" }
+@STRING{popl09      = popl # ", Savannah, Georgia" }
+@STRING{popl10      = popl # ", Madrid, Spain" }
+@STRING{popl11      = popl # ", Austin, Texas" }
+@STRING{popl12      = popl # ", Philadelphia, Pennsylvania" }
+@STRING{popl13      = popl # ", Rome, Italy" }
+@STRING{popl14      = popl # ", San Diego, California" }
+@STRING{popl15      = popl # ", Mumbai, India" }
+% ----
+@STRING{icfp        = "{ACM} {SIGPLAN} {I}nternational {C}onference on
+                      {F}unctional {P}rogramming ({ICFP})" }
+@STRING{icfp14      = icfp # ", Gothenburg, Sweden" }
+@STRING{icfp13      = icfp # ", Boston, Massachusetts" }
+@STRING{icfp11      = icfp # ", Tokyo, Japan" }
+@STRING{icfp10      = icfp # ", Baltimore, Maryland" }
+@STRING{icfp08      = icfp # ", Victoria, British Colombia" }
+@STRING{icfp05      = icfp # ", Tallinn, Estonia" }
+@STRING{icfp04      = icfp # ", Snowbird, Utah" }
+@STRING{icfp03      = icfp # ", Uppsala, Sweden" }
+@STRING{icfp02      = icfp # ", Pittsburgh, Pennsylvania" }
+@STRING{icfp01      = icfp # ", Firenze, Italy" }
+@STRING{icfp00      = icfp # ", Montr{\'e}al, Qu{\'e}bec" }
+@STRING{icfp99      = icfp # ", Paris, France" }
+@STRING{icfp98      = icfp # ", Baltimore, Maryland" }
+@STRING{icfp97      = icfp # ", Amsterdam, The Netherlands" }
+@STRING{icfp96      = icfp # ", Philadelphia, Pennsylvania" }
+% ----
+@STRING{oopsla      = "{ACM} {SIGPLAN} {C}onference on {O}bject {O}riented
+                      {P}rogramming: {S}ystems, {L}anguages, and {A}pplications ({OOPSLA})" }
+@STRING{oopslapre96 = "{C}onference on {O}bject {O}riented {P}rogramming:
+                      {S}ystems, {L}anguages, and {A}pplications ({OOPSLA})" }
+
+
+@STRING{dbpl        = {Database Programming Languages (DBPL)}}
+@STRING{dbpl05      = dbpl}
+
+@STRING{disc        = {International Symposium on Distributed Computing (DISC)}}
+@STRING{disc06      = disc}
+
+@STRING{ecoop       = {European Conference on Object-Oriented Programming (ECOOP)} }
+@STRING{ecoop92     = ecoop}
+@STRING{ecoop95     = ecoop}
+@STRING{ecoop98     = ecoop}
+@STRING{ecoop06     = ecoop # ", Nantes, France"}
+
+@STRING{oopsla86    = oopslapre96 # ", Portland, Oregon" }
+@STRING{oopsla89    = oopslapre96 # ", New Orleans, Louisiana"}
+@STRING{oopsla90    = oopslapre96 # "/" # ecoop # ", Ottawa, Ontario" }
+@STRING{oopsla98    = oopsla # ", Vancouver, British Columbia" }
+@STRING{oopsla03    = oopsla # ", Anaheim, California" }
+% ----
+@STRING{lics        = "{IEEE} {S}ymposium on {L}ogic in {C}omputer {S}cience ({LICS})" }
+@STRING{lics86      = lics # ", Cambridge, Massachusetts" }
+@STRING{lics87      = lics # ", Ithaca, New York" }
+@STRING{lics88      = lics # ", Edinburgh, Scotland" }
+@STRING{lics89      = lics # ", Asilomar, California" }
+@STRING{lics90      = lics # ", Philadelphia, Pennsylvania" }
+@STRING{lics91      = lics # ", Amsterdam, The Netherlands" }
+@STRING{lics92      = lics # ", Santa Cruz, California" }
+@STRING{lics93      = lics # ", Montr{\'e}al, Qu{\'e}bec" }
+@STRING{lics94      = lics # ", Paris, France" }
+@STRING{lics95      = lics # ", San Diego, California" }
+@STRING{lics96      = lics # ", New Brunswick, New Jersey" }
+@STRING{lics97      = lics # ", Warsaw, Poland" }
+@STRING{lics98      = lics # ", Indianapolis, Indiana" }
+@STRING{lics99      = lics # ", Trento, Italy" }
+@STRING{lics00      = lics # ", Santa Barbara, California" }
+@STRING{lics01      = lics # ", Boston, Massachusetts" }
+@STRING{lics02      = lics # ", Copenhagen, Denmark" }
+@STRING{lics03      = lics # ", Ottawa, Ontario" }
+@STRING{lics11      = lics # ", Toronto, Ontario" }
+% ----
+@STRING{pldi        = "{ACM SIGPLAN Conference on Programming Language Design
+                      and Implementation (PLDI)}" }
+@STRING{pldi88      = pldi # ", {A}tlanta, {G}eorgia" }
+@STRING{pldi89      = pldi # ", Portland, Oregon" }
+@STRING{pldi90      = pldi # ", White Plains, New York" }
+@STRING{pldi91      = pldi # ", Toronto, Ontario" }
+@STRING{pldi92      = pldi # ", San Francisco, California" }
+@STRING{pldi93      = pldi # ", Albuquerque, New Mexico" }
+@STRING{pldi94      = pldi # ", Orlando, Florida" }
+@STRING{pldi95      = pldi # ", La Jolla, California" }
+@STRING{pldi96      = pldi # ", Philadephia, Pennsylvania" }
+@STRING{pldi97      = pldi # ", Las Vegas, Nevada" }
+@STRING{pldi98      = pldi # ", Montr{\'e}al, Qu{\'e}bec" }
+@STRING{pldi99      = pldi # ", {A}tlanta, {G}eorgia" }
+@STRING{pldi00      = pldi # ", Vancouver, British Columbia" }
+@STRING{pldi01      = pldi # ", Snowbird, Utah" }
+@STRING{pldi02      = pldi # ", Berlin, Germany" }
+@STRING{pldi03      = pldi # ", San Diego, California" }
+@STRING{pldi08      = pldi # ", Tucson, Arizona" }
+% ----
+@STRING{lfp         = "ACM Symposium on Lisp and Functional Programming (LFP)" }
+@STRING{lfp80       = lfp # ", Stanford, California" }
+@STRING{lfp84       = lfp # ", Austin, Texas" }
+@STRING{lfp86       = lfp # ", Cambridge, Massachusetts" }
+@STRING{lfp88       = lfp # ", Snowbird, Utah" }
+@STRING{lfp90       = lfp }
+@STRING{lfp92       = lfp # ", San Francisco, California"}
+@STRING{lfp94       = lfp # ", Orlando, Florida" }
+
+% ----
+@STRING{fpca        = "ACM Symposium on Functional Programming Languages and
+                      Computer Architecture (FPCA)" }
+@STRING{fpca87      = fpca # ", Portland, Oregon" }
+@STRING{fpca89      = fpca # ", London, England" }
+@STRING{fpca93      = fpca # ", Copenhagen, Denmark"}
+@STRING{fpca95      = fpca # ", San Diego, California" }
+
+% ----
+@STRING{ec          = "{ACM} {SIGecom} {C}onference on {E}conomics and
+                      {C}omputation (EC)" }
+@STRING{ec13        = ec # ", Philadelphia, Pennsylvania"}
+@STRING{ec14        = ec # ", Palo Alto, California"}
+
+% ----
+@STRING{ics         = "{S}ymposium on {I}nnovations in {C}ompuer {S}cience"}
+@STRING{itcs        = "{ACM} {SIGACT} {I}nnovations in {T}heoretical {C}omputer
+                      {S}cience (ITCS)"}
+@STRING{itcs10      = ics # ", Beijing, China"}
+@STRING{itcs12      = itcs # ", Cambridge, Massachusetts"}
+@STRING{itcs13      = itcs # ", Berkeley, California"}
+@STRING{itcs14      = itcs # ", Princeton, New Jersey"}
+
+% ----
+@STRING{stoc        = "{ACM} {SIGACT} {S}ymposium on {T}heory of {C}omputing (STOC)"}
+@STRING{stoc99      = stoc # ", Atlanta, Georgia"}
+@STRING{stoc04      = stoc # ", Chicago, Illinois"}
+@STRING{stoc05      = stoc # ", Baltimore, Maryland"}
+@STRING{stoc06      = stoc # ", Seattle, Washington"}
+@STRING{stoc07      = stoc # ", San Diego, California"}
+@STRING{stoc08      = stoc # ", Victoria, British Colombia"}
+@STRING{stoc09      = stoc # ", Bethesda, Maryland"}
+@STRING{stoc10      = stoc # ", Cambridge, Massachusetts"}
+@STRING{stoc11      = stoc # ", San Jose, California"}
+@STRING{stoc12      = stoc # ", New York, New York"}
+@STRING{stoc13      = stoc # ", Palo Alto, California"}
+@STRING{stoc14      = stoc # ", New York, New York"}
+
+% ----
+@STRING{focs        = "{IEEE} {S}ymposium on {F}oundations of {C}omputer {S}cience (FOCS)"}
+@STRING{focs07      = focs # ", Providence, Rhode Island"}
+@STRING{focs09      = focs # ", Atlanta, Georgia"}
+@STRING{focs10      = focs # ", Las Vegas, Nevada"}
+@STRING{focs12      = focs # ", New Brunswick, New Jersey"}
+@STRING{focs13      = focs # ", Berkeley, California"}
+@STRING{focs14      = focs # ", Philadelphia, Pennsylvania"}
+
+% ----
+@STRING{socg        = "{SIGACT} -- {SIGGRAPH} {S}ymposium on {C}omputational
+  {G}eometry (SOCG)"}
+@STRING{socg14      = socg # ", Kyoto, Japan"}
+
+% ----
+@STRING{soda        = "{ACM--SIAM} {S}ymposium on {D}iscrete {A}lgorithms (SODA)"}
+@STRING{soda10      = soda # ", Austin, Texas"}
+
+% ----
+@STRING{tcc         = "{IACR} {T}heory of {C}ryptography {C}onference (TCC)"}
+@STRING{tcc06       = tcc # ", New York, New York"}
+@STRING{tcc11       = tcc # ", Providence, Rhode Island"}
+@STRING{tcc12       = tcc # ", Taormina, Italy"}
+
+% ----
+@STRING{kdd         = "{ACM} {SIGKDD} {C}onference on {K}nowledge {D}iscovery
+  and {D}ata {M}ining (KDD)"}
+@STRING{kdd02       = kdd # ", Edmonton, Alberta"}
+@STRING{kdd08       = kdd # ", Las Vegas, Nevada"}
+@STRING{kdd09       = kdd # ", Paris, France"}
+@STRING{kdd10       = kdd # ", Washington, DC"}
+
+% ----
+@STRING{nips        = "{C}onference on {N}eural {I}nformation {P}rocessing
+  {S}ystems (NIPS)"}
+@STRING{nips08      = nips # ", Vancouver, British Colombia" }
+@STRING{nips12      = nips # ", Lake Tahoe, California" }
+@STRING{nips13      = nips # ", Lake Tahoe, California" }
+
+% ----
+@STRING{icml        = "{I}nternational {C}onference on {M}achine {L}earning (ICML)" }
+@STRING{icml03      = icml # ", Washington, DC" }
+@STRING{icml14      = icml # ", Beijing, China" }
+
+% ----
+@STRING{sp          = "{IEEE} {S}ymposium on {S}ecurity and {P}rivacy (S\&P)"}
+@STRING{sp08        = sp # ", Oakland, California"}
+@STRING{sp09        = sp # ", Oakland, California"}
+
+% ----
+@STRING{icde        = "{IEEE} {I}nternational {C}onference on {D}ata
+  {E}ngineering (ICDE)"}
+@STRING{icde06      = icde # ", Atlanta, Georgia" }
+@STRING{icde07      = icde # ", Istanbul, Turkey" }
+@STRING{icde13      = icde # ", Brisbane, Australia" }
+
+% ----
+@STRING{vldb        = "{I}nternational {C}onference on {V}ery {L}arge {D}ata
+  {B}ases (VLDB)"}
+@STRING{vldb12      = vldb # ", Istanbul, Turkey"}
+
+% ----
+@STRING{icc         = "{IEEE} {I}nternational {C}onference on {C}ommunications
+  (ICC)"}
+@STRING{icc11       = icc # ", Kyoto, Japan"}
+
+% ----
+@STRING{sigmod      = "{ACM} {SIGMOD} {I}nternational {C}onference on
+  {M}anagement of {D}ata (SIGMOD)"}
+@STRING{sigmod09    = sigmod # ", Providence, Rhode Island"}
+@STRING{sigmod14    = sigmod # ", Snowbird, Utah"}
+
+% ----
+@STRING{tamc        = "Theory and Applications of Models of Computation
+  ({TAMC})" }
+@STRING{tamc08      = tamc # ", Xi'an, China" }
+
+% ----
+@STRING{nsdi        = "{USENIX} {S}ymposium on {N}etworked {S}ystems {D}esign
+  and {I}mplementation (NDSI)"}
+@STRING{nsdi10      = nsdi # ", San Jose, California"}
+
+% ----
+@STRING{eucrypt     = "{IACR} {I}nternational {C}onference on the {T}heory and
+  {A}pplications of {C}ryptographic {T}echniques (EUROCRYPT)"}
+@STRING{eucrypt13   = eucrypt # ", Athens, Greece"}
+
+% ----
+@STRING{vmcai    = "{I}nternational {C}onference on {V}erification, {M}odel
+                    {C}hecking, and {A}bstract {I}nterpretation ({VMCAI})" }
+@STRING{vmcai07  = vmcai # ", Nice, France" }
+@STRING{vmcai13  = vmcai # ", Rome, Italy" }
+
+% ----
+@STRING{csf      = "{IEEE} {C}omputer {S}ecurity {F}oundations {S}ymposium" }
+@STRING{csf08    = csf # ", Pittsburgh, Pennsylvania" }
+@STRING{csf13    = csf # ", New Orleans, Louisiana" }
+@STRING{csf14    = csf # ", Vienna, Austria" }
+
+% ----
+@STRING{pepmpre12 = "{S}ymposium on {P}artial {E}valuation and
+                    {S}emantics-{B}ased {P}rogram {M}anipulation ({PEPM})" }
+@STRING{pepm91    = pepmpre12 # ", New Haven, Connecticut" }
+
+% ----
+% workshops with informal proceedings only
+% ----
+@STRING{informal =  "{, informal proceedings}"}
+@STRING{fool     =  {International Workshop on Foundations of Object-Oriented
+                    Languages (FOOL)} # informal }
+@STRING{haskellw =  {ACM Haskell Workshop} # informal }
+@STRING{mlw      =  {ACM SIGPLAN Workshop on ML} # informal } 
+@STRING{space    =  {Workshop on Semantics, Program Analysis and Computing
+                    Environments for Memory Management (SPACE)} # informal }
+@STRING{tpa      =  {Workshop on Types for Program Analysis (TPA)} # informal }
+@STRING{fopara   =  {International Workshop on Foundational and Practical
+                    Aspects of Resource Analysis (FOPARA)} # informal}
+
+% ----
+% meetings with proceedings:
+% ---
+@STRING{aplas     = {Asian Symposium on Programming Languages and Systems (APLAS)} }
+@STRING{asplos    = {International Conference on Architectural Support for
+                    Programming Langauages and Operating Systems (ASPLOS)} }
+@STRING{cav       = {International Conference on Computer Aided Verification (CAV)} }
+@STRING{ceemas    = {International Central and Eastern European Conference on
+                    Multi-Agent Systems} }
+@STRING{colt      = {{C}onference on {C}omputational {L}earning {T}heory
+                    ({CoLT})}}
+@STRING{concur    = {International Conference on Concurrency Theory (CONCUR)} }
+@STRING{csl       = {International Workshop on Computer Science Logic (CSL)} }
+@STRING{csfw      = {IEEE Computer Security Foundations Workshop (CSFW) } }
+@STRING{ecoop     = {European Conference on Object-Oriented Programming (ECOOP)} }
+@STRING{esop      = {European Symposium on Programming (ESOP)} }
+@STRING{fesca     = {International Workshop on Formal Engineering approaches to
+                    Software Components and Architectures (FESCA)} }
+@STRING{flops     = {International Symposium on Functional and Logic Programming
+                    (FLOPS)} }
+@STRING{fmco      = {International Symposia on Formal Methods for Components and
+                    Objects (FMCO)} }
+@STRING{fsttcs    = {Foundations of Software Technology and Theoretical Computer
+                    Science (FSTTCS)} }
+@STRING{hoots     = {Workshop on Higher Order Operational Techniques in
+                    Semantics (HOOTS)} }
+@STRING{icalp     = {International Colloquium on Automata, Languages and
+                    Programming (ICALP)} }
+@STRING{icse      = {International Conference on Software Engineering (ICSE)} }
+@STRING{lfcompsci = {International Symposium on Logical Foundations of Computer
+                    Science (LFCS)} }
+@STRING{mfps      = {Workshop on the Mathematical Foundations of Programming
+                    Semantics (MFPS)} }
+@STRING{osdi      = {USENIX Symposium on Operating Systems Design and
+                    Implementation (OSDI)} }
+@STRING{paste     = {ACM SIGPLAN--SIGSOFT Workshop on Program Analysis for
+                    Software Tools and Engineering (PASTE)} }
+@STRING{ppdp      = {ACM SIGPLAN International Conference on Principles and
+                    Practice of Declarative Programming (PPDP)} }
+@STRING{rta       = {International Conference on Rewriting Techniques and
+                    Applications (RTA)} }
+@STRING{sas       = {International Symposium on Static Analysis (SAS) } }
+@STRING{sosp      = {ACM Symposium on Operating Systems Principles (SOSP)} }
+@STRING{tacs      = {International Symposium on Theoretical Aspects of Computer
+                    Software (TACS)} }
+@STRING{tacas     = {International Conference on Tools and Algorithms for the
+                    Construction and Analysis of Systems (TACAS)} }
+@STRING{tapsoft   = {Theory and Practice of Software Development (TAPSOFT)} }
+@STRING{tic       = {ACM SIGPLAN Workshop on Types in Compilation ({TIC})} }
+@STRING{tlca      = {International Conference on Typed Lambda Calculi and
+                    Applications (TLCA)} }
+@STRING{tldi      = {ACM SIGPLAN Workshop on Types in Language Design and
+                    Implementation (TLDI)} }
+@STRING{tphol     = {International Conference on Theorem Proving in Higher Order
+                    Logics } }
+@STRING{types     = {International Workshop on Types for Proofs and Programs
+                    (TYPES)} }
+@STRING{webdb     = {International Workshop on the Web and Databases (WebDB)} }
+@STRING{wosn      = {Workshop on Online Social Networks (WOSN)} }
+@STRING{xsym      = {Database and XML Technologies: International XML Database
+                    Symposium (XSym)} }
+@STRING{wsa       = {Workshop on Static Analysis (WSA) } }
+% ----
+% Specific meetings, with locations:
+% ---
+@STRING{aplas03     = aplas # ", Beijing, China" }
+@STRING{aplas05     = aplas # ", Tsukuba, Japan" }
+@STRING{aplas10     = aplas # ", Shanghai, China" }
+%----
+@STRING{asplos14    = aplas # ", Salt Lake City, Utah" }
+%----
+@STRING{ceemas07    = ceemas # ", Leipzig, Germany" }
+% ---
+@STRING{colt95      = colt # ", Santa Cruz, California" }
+@STRING{colt96      = colt # ", Desenzano sul Garda, Italy" }
+@STRING{colt13      = colt # ", Princeton, New Jersey" }
+% ---
+@STRING{concur07    = concur # ", Lisbon, Portugal" }
+% ---
+@STRING{cav96       = cav # ", New Brunswick, New Jersey" }
+@STRING{cav02       = cav # ", Copenhagen, Denmark" }
+@STRING{cav07       = cav # ", Berlin, Germany" }
+% ---
+@STRING{csl94       = csl # ", Kazimierz, Poland" }
+@STRING{csl97       = csl # ", Aarhus, Denmark" }
+@STRING{csl01       = csl # ", Paris, France" }
+% ---
+@STRING{csfw02      = csfw # ", Cape Breton, Nova Scotia" }
+% ---
+@STRING{ecoop90     = oopsla # "/" # ecoop # ", Ottawa, Ontario" }
+@STRING{ecoop97     = ecoop # ", Jyv{\"a}skyl{\"a}, Finland" }
+@STRING{ecoop99     = ecoop # ", Lisbon, Portugal" }
+@STRING{ecoop00     = ecoop # ", Sophia Antipolis and Cannes, France" }
+@STRING{ecoop02     = ecoop # ", Malaga, Spain" }
+@STRING{ecoop03     = ecoop # ", Darmstadt, Germany" }
+@STRING{ecoop04     = ecoop # ", Oslo, Norway" }
+% ---
+@STRING{esop88      = esop # ", Nancy, France" }
+@STRING{esop92      = esop # ", Rennes, France" }
+@STRING{esop94      = esop # ", Edinburgh, Scotland" }
+@STRING{esop00      = esop # ", Berlin, Germany" }
+@STRING{esop01      = esop # ", Genova, Italy" }
+@STRING{esop02      = esop # ", Grenoble, France" }
+@STRING{esop09      = esop # ", York, England" }
+@STRING{esop11      = esop # ", Saarbr{\"u}cken, Germany" }
+@STRING{esop14      = esop # ", Grenoble, France" }
+% ---
+@STRING{fesca14     = fesca # ", Grenoble, France" }
+% ---
+@STRING{flops04     = flops # ", Nara, Japan" }
+% ---
+@STRING{fmco06      = fmco # ", Amsterdam, The Netherlands" }
+% ---
+@STRING{fsttcs93    = fsttcs # ", Bombay, India" }
+@STRING{fsttcs04    = fsttcs # ", Chennai, India" }
+% ---
+@STRING{hoots00     = hoots # ", Montr{\'e}al, Qu{\'e}bec" }
+% ---
+@STRING{icalp98     = icalp # ", Aalborg, Denmark" }
+@STRING{icalp06     = icalp # ", Venice, Italy" }
+@STRING{icalp12     = icalp # ", Warwick, England" }
+@STRING{icalp13     = icalp # ", Riga, Latvia" }
+% ---
+@STRING{icse14      = icse # ", Hyderabad, India" }
+% ---
+@STRING{lfcompsci94 = lfcompsci # ", St. Petersburg, Russia" }
+% ---
+@STRING{mfps89      = mfps # ", New Orleans, Louisiana" }
+@STRING{mfps95      = mfps # ", New Orleans, Louisiana" }
+@STRING{mfps01      = mfps # ", Aarhus, Denmark" }
+@STRING{mfps14      = mfps # ", Ithaca, New York" }
+% ---
+@STRING{osdi96      = osdi # ", Seattle, Washington" }
+@STRING{osdi00      = osdi # ", San Diego, California" }
+% ---
+@STRING{paste01     = paste # ", Snowbird, Utah" }
+% ---
+@STRING{ppdp99      = ppdp # ", Paris France" }
+@STRING{ppdp01      = ppdp # ", Firenze, Italy" }
+@STRING{ppdp12      = ppdp # ", Leuven, Belgium" }
+% ---
+@STRING{rta03       = rta # ", Valencia, Spain" }
+% ---
+@STRING{sas95       = sas # ", Glasgow, Scotland" }
+@STRING{sas96       = sas # ", Aachen, Germany" }
+@STRING{sas97       = sas # ", Paris, France" }
+@STRING{sas01       = sas # ", Paris, France" }
+% ---
+@STRING{sosp93      = sosp # ", Asheville, North Carolina" }
+% ---
+@STRING{tacs94      = tacs # ", Sendai, Japan" }
+@STRING{tacs01      = tacs # ", Sendai, Japan" }
+% ---
+@STRING{tacas06     = tacas # ", Vienna, Austria" }
+% ---
+@STRING{tapsoft93   = tapsoft # ", Orsay, France" }
+@STRING{tapsoft97   = tapsoft # ", Lille, France" }
+% ---
+@STRING{tic97       = tic # ", Amsterdam, The Netherlands"}
+@STRING{tic98       = tic # ", Kyoto, Japan"}
+@STRING{tic00       = tic # ", Montr{\'e}al, Qu{\'e}bec" }
+% ---
+@STRING{tlca93      = tlca # ", Utrecht, The Netherlands" }
+@STRING{tlca97      = tlca # ", Nancy, France" }
+@STRING{tlca99      = tlca # ", L'Aquila, Italy" }
+@STRING{tlca01      = tlca # ", Krak{\'{o}}ow, Poland" }
+@STRING{tlca03      = tlca # ", Valencia, Spain" }
+% ---
+@STRING{tldi03      = tldi # ", New Orleans, Louisiana"}
+% ---
+@STRING{tphol09     = tphol # ", Munich, Germany" }
+% ---
+@STRING{types93     = types # ", Nijmegen, The Netherlands" }
+@STRING{types98     = types # ", Kloster Irsee, Germany" }
+% ---
+@STRING{wosn12      = wosn # ", Helsinki, Finland" }
+
+% ---
+@STRING{wsa93       = wsa # ", Padova, Italy" }
+
+% hack to alphabetize funny names (from the LaTeX Companion)
+@preamble{"\newcommand{\SortNoop}[1]{}"}
+

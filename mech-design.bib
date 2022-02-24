@@ -1,0 +1,98 @@
+@inproceedings{DBLP:conf/ec/BallK19,
+  author    = {Ian Ball and
+               Deniz Kattwinkel},
+  editor    = {Anna Karlin and
+               Nicole Immorlica and
+               Ramesh Johari},
+  title     = {Probabilistic Verification in Mechanism Design},
+  booktitle = {Proceedings of the 2019 {ACM} Conference on Economics and Computation,
+               {EC} 2019, Phoenix, AZ, USA, June 24-28, 2019},
+  pages     = {389--390},
+  publisher = {{ACM}},
+  year      = {2019},
+  url       = {https://doi.org/10.1145/3328526.3329657},
+  doi       = {10.1145/3328526.3329657},
+  timestamp = {Wed, 26 Jun 2019 19:12:03 +0200},
+  biburl    = {https://dblp.org/rec/conf/ec/BallK19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Vickrey_Clarke_Groves-AFP,
+  author  = {Marco B. Caminati and Manfred Kerber and Christoph Lange and Colin Rowat},
+  title   = {VCG - Combinatorial Vickrey-Clarke-Groves Auctions},
+  journal = {Archive of Formal Proofs},
+  month   = apr,
+  year    = 2015,
+  note    = {\url{https://isa-afp.org/entries/Vickrey_Clarke_Groves.html},
+            Formal proof development},
+  ISSN    = {2150-914x},
+}
+
+@misc{2015:web:aat,
+  title={Auction Theory Toolbox},
+  url={https://www.cs.bham.ac.uk/research/projects/formare/code/auction-theory/}
+}
+
+@InProceedings{10.1007/978-3-030-88708-7_9,
+  author={Holliday, Wesley H. and Norman, Chase and Pacuit, Eric},
+  editor="Ghosh, Sujata and Icard, Thomas",
+  title="Voting Theory in the Lean Theorem Prover",
+  booktitle="Logic, Rationality,  and Interaction",
+  year="2021",
+  publisher="Springer International Publishing",
+  address="Cham",
+  pages="111--127",
+  abstract="There is a long tradition of fruitful interaction between logic and social choice theory. In recent years, much of this interaction has focused on computer-aided methods such as SAT solving and interactive theorem proving. In this paper, we report on the development of a framework for formalizing voting theory in the Lean theorem prover, which we have applied to verify properties of a recently studied voting method. While previous applications of interactive theorem proving to social choice (using Isabelle/HOL and Mizar) have focused on the verification of impossibility theorems, we aim to cover a variety of results ranging from impossibility theorems to the verification of properties of specific voting methods (e.g., Condorcet consistency, independence of clones, etc.). In order to formalize voting theoretic axioms concerning adding or removing candidates and voters, we work in a variable-election setting whose formalization makes use of dependent types in Lean.",
+  isbn="978-3-030-88708-7"
+}
+
+@article{10.1145/3125642,
+  author = {Brandl, Florian and Brandt, Felix and Eberl, Manuel and Geist, Christian},
+  title = {Proving the Incompatibility of Efficiency and Strategyproofness via SMT Solving},
+  year = {2018},
+  issue_date = {April 2018},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {65},
+  number = {2},
+  issn = {0004-5411},
+  url = {https://doi.org/10.1145/3125642},
+  doi = {10.1145/3125642},
+  abstract = {Two important requirements when aggregating the preferences of multiple agents are that the outcome should be economically efficient and the aggregation mechanism should not be manipulable. In this article, we provide a computer-aided proof of a sweeping impossibility using these two conditions for randomized aggregation mechanisms. More precisely, we show that every efficient aggregation mechanism can be manipulated for all expected utility representations of the agents’ preferences. This settles an open problem and strengthens several existing theorems, including statements that were shown within the special domain of assignment. Our proof is obtained by formulating the claim as a satisfiability problem over predicates from real-valued arithmetic, which is then checked using a satisfiability modulo theories (SMT) solver. To verify the correctness of the result, a minimal unsatisfiable set of constraints returned by the SMT solver was translated back into a proof in higher-order logic, which was automatically verified by an interactive theorem prover. To the best of our knowledge, this is the first application of SMT solvers in computational social choice.},
+  journal = {J. ACM},
+  month = {jan},
+  articleno = {6},
+  numpages = {28},
+  keywords = {efficiency, strategyproofness, Stochastic dominance}
+}
+@article{DBLP:journals/jowua/KammullerKP17,
+  author    = {Florian Kamm{\"{u}}ller and
+               Manfred Kerber and
+               Christian W. Probst},
+  title     = {Insider Threats and Auctions: Formalization, Mechanized Proof, and
+               Code Generation},
+  journal   = {J. Wirel. Mob. Networks Ubiquitous Comput. Dependable Appl.},
+  volume    = {8},
+  number    = {1},
+  pages     = {44--78},
+  year      = {2017},
+  url       = {https://doi.org/10.22667/JOWUA.2017.03.31.044},
+  doi       = {10.22667/JOWUA.2017.03.31.044},
+  timestamp = {Sun, 17 May 2020 00:26:38 +0200},
+  biburl    = {https://dblp.org/rec/journals/jowua/KammullerKP17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{KERBER201626,
+title = {An introduction to mechanized reasoning},
+journal = {Journal of Mathematical Economics},
+volume = {66},
+pages = {26-39},
+year = {2016},
+issn = {0304-4068},
+doi = {https://doi.org/10.1016/j.jmateco.2016.06.005},
+url = {https://www.sciencedirect.com/science/article/pii/S0304406816300362},
+author = {Manfred Kerber and Christoph Lange and Colin Rowat},
+keywords = {Mechanized reasoning, Formal methods, Social choice theory, Auction theory},
+abstract = {Mechanized reasoning uses computers to verify proofs and to help discover new theorems. Computer scientists have applied mechanized reasoning to economic problems but–to date–this work has not yet been properly presented in economics journals. We introduce mechanized reasoning to economists in three ways. First, we introduce mechanized reasoning in general, describing both the techniques and their successful applications. Second, we explain how mechanized reasoning has been applied to economic problems, concentrating on the two domains that have attracted the most attention: social choice theory and auction theory. Finally, we present a detailed example of mechanized reasoning in practice by means of a proof of Vickrey’s familiar theorem on second-price auctions.}
+}
